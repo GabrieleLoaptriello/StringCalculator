@@ -51,9 +51,30 @@ public class StringCalculatorTest {
 	}
 
 	@Test
-	public void addWillReturnThreeWithTwoNumber() {
+	public void addWillReturnThreeWithTwoNumbers() {
 		StringCalculator calculator = new StringCalculator();
 
 		assertEquals(calculator.add("1,2"), 3);
+	}
+
+	@Test
+	public void addWillReturnFourWithTwoNumbers() {
+		StringCalculator calculator = new StringCalculator();
+
+		assertEquals(calculator.add("2,2"), 4);
+	}
+
+	@Test
+	public void addCanAcceptCanHandleNewLineBetweenNumbers() {
+		StringCalculator calculator = new StringCalculator();
+
+		assertEquals(calculator.add("1\n2"), 3);
+	}
+
+	@Test
+	public void addCanAcceptCanHandleNewLineBetweenNumbers2() {
+		StringCalculator calculator = new StringCalculator();
+
+		assertEquals(calculator.add("2\n2"), 4);
 	}
 }
