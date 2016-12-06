@@ -26,10 +26,6 @@ public class StringCalculator {
 		return result;
 	}
 
-	private String[] getNumbers(String numbersStr) {
-		return numbersStr.split(",");
-	}
-
 	private int getSum(String[] numbers) {
 		return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
 	}
